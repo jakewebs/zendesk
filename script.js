@@ -10,5 +10,5 @@ let token = process.argv[3];
 const child_process = require('child_process');
 const output = child_process.spawn('python3', ['process.py', email, token]);
 output.stdout.on('data', function (data) {
-	console.log(data.toString());
+	let res = data.toString();
 });

@@ -30,6 +30,10 @@ else:
 	# Print out the tickets
 	data = response.json()
 	tickets = data['tickets']
+	
 	print("Login successful! ")
 	print("---- TICKETS ----")
-	print(tickets)
+	#print(tickets)
+	for t in tickets:
+		print("->~~~Ticket number: ", t['id'], ", Priority: ", t['priority'], ", Requester: ", t['requester_id'], ", Status: ", t['status'], "~~~")
+		print("Description: ", t['description'], '\n')
